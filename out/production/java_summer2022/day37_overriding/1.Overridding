@@ -1,0 +1,43 @@
+Ayni isimde farkli iki method olusturmanin iki yolu vardir
+1- Method Signature’ini degistirerek ayni isimde farkli iki method yapmak
+Overloading
+2- Method Signature’ini degistirmeden iki method’dan sadece birinin calismasini saglamak
+Overriding
+
+NOT 1: Method Signature’ini degistirmezsek Java her iki method’u ayni method olarak gorur ve bir
+class icerisinde ayni method’u iki kez olusturmaya IZIN VERMEZ.
+Biz parent ve child class’da signature’I ayni olan iki method olusturursak Java ikisinden
+sadece birini calistirir
+
+NOT 2: Her iki yonteme dikkat edilirse Method Body’nin degismesi sart degildir.
+Ancak 2.yontemde signature zaten degismedigi icin, Body degismezse 2.method farkli
+bir method olmaz.
+
+Overriding yapildiginda parent class’daki methoda Overridden(Gecersiz kilinan) Method,
+child class’daki methoda Overriding(Gecersiz kilan) Method denir.
+
+--Overloading vs Overriding--
+1) Overloading’de method signature degisir, Overriding’de degismez.
+2) Overloading’de body istenirse degistirilebilir, Overriding’de body %99 degistirilir.
+3) final, static ve private methodlar Overload edilebilir, ama Override edilemezler.
+4) Overloading Compile Time Polymorphism (static)’dir, Overriding is Run Time
+Polymorphism’(dynamic)dir.
+5) Overloading’de inheritance gerekmez, Overriding’de gerekir.
+6) Overloading’de istedigimiz sekilde access modifier ve return type kullanabiliriz ama Overriding’de
+access modifier ve return type kullanma belli kurallara baglidir.
+
+**protected final void getDetails(){}
+final; son hali bu bi daha bunu kimse degistirmesin demek
+override etmeyeceginiz bir method varsa final edilebilir
+yani bi alt child'i olmayacaksa final kullanabiliriz
+
+
+1. Pollymorphism : Cok sekillilik, Java da ayni isimdeki bir method’un farkli farkli ozellikler
+gosterebilmesidir
+2. Iki ihtimal var
+1. Overloading : Ayni class’da ve ayni ismide olup farkli method signature’ina sahip birden fazla
+method olusturabilir ve boylece ayni isimdeki method’larla farkli farkli ozellikler uretebiliriz
+2. Overridding: Overridding sadece parent ve child class’da olur. Amaci parent class’daki bir
+method’un ayni isim ve signature sahip bir kopyasini child class’da olusturup, child class’da
+farkli ozellik uretmesini saglamaktir.
+Polymorhism = Overloading + Overridding

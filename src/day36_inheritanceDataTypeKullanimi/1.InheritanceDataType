@@ -1,0 +1,12 @@
+1. Inheritance’da Data Type kullanimi ve overriding
+
+2. Inheritance’da child class’dan olusturacagimiz objelerde data turu olarak parent claslari
+secebiliriz.
+
+3. Child class’daki bir obje’nin child class ozelliklerini degil de, parent class’a ait ozelliklerini
+vurgulamak istersek, bu yonteme basvururuz.
+
+4. Bu asamada eger parent class’da genel olarak belirlenmis bir ozellik, child class’da
+spesifiklestirilmis ise (override) daha guncel oldugu icin child class’daki gecerlidir.
+Buradaki onemli nokta su, bir objenin ozelligini aramaya data turunden baslariz, orada
+bulamazsak kullanilmaz, bulursak, daha gunceli var mi diye overriding aranir.
