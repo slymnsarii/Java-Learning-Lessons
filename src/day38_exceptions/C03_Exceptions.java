@@ -13,16 +13,20 @@ public class C03_Exceptions {
 
         String urunler[]={"Nutella","Cokokrem","Sut","Cay","Findik"};
 
-        Scanner scan=new Scanner(System.in);
+        Scanner scan;
         System.out.println("Istediginiz urunun sira nosunu giriniz");
 
         int istenenSira=0;
+        boolean kontrol=true;
 
-        try {
-            istenenSira= scan.nextInt();
-        } catch (InputMismatchException deneme) {
-            System.out.println("Urun index'i icin bir tam sayi girmeniz gerekli");
+        while (kontrol){ //while kullanarak tekrar tekrar calismasini sagladim, dogru deger girene kadar
+            try {
+                scan=new Scanner(System.in);
+                istenenSira= scan.nextInt();
+            } catch (InputMismatchException deneme) {
+                System.out.println("Urun index'i icin bir tam sayi girmeniz gerekli");
 
+            }
         }
         /*
         catch blogunun onundeki parantezde
